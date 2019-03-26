@@ -1,988 +1,195 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>AdcKi`s Lab</title>
 
-    <!-- Document Settings -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Open Graph Meta -->
+    <meta content="AdcKi`s Lab" property="og:site_name">
+    
+      <meta content="AdcKi`s Lab" property="og:title">
+    
+    
+      <meta content="article" property="og:type">
+    
+    
+      <meta content="just blog" property="og:description">
+    
+    
+      <meta content="http://bipowi.github.io/" property="og:url">
+    
+    
+    
+      <meta content="http://bipowi.github.io/assets/img/touring.jpg" property="og:image">
+    
 
-    <!-- Base Meta -->
-    <!-- dynamically fixing the title for tag/author pages -->
-
-
-
-    <title>Ghost</title>
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Styles'n'Scripts -->
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-    <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-     <!-- 웹 폰트 설정 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-    <style>.hljs { background: none; }</style>
-
-    <!-- This tag outputs SEO meta+structured data and other important settings -->
-    <meta name="description" content="The professional publishing platform" />
-    <link rel="shortcut icon" href="/./assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
-
-     <!--title below is coming from _includes/dynamic_title-->
-    <meta property="og:site_name" content="Ghost" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ghost" />
-    <meta property="og:description" content="The professional publishing platform" />
-    <meta property="og:url" content="/" />
-    <meta property="og:image" content="/./assets/images/blog-cover.jpg" />
-    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ghost" />
-    <meta name="twitter:description" content="The professional publishing platform" />
-    <meta name="twitter:url" content="/" />
-    <meta name="twitter:image" content="/./assets/images/blog-cover.jpg" />
-    <meta name="twitter:label1" content="Written by" />
-    <meta name="twitter:data1" content="Ghost" />
-    <meta name="twitter:site" content="@tryghost" />
-    <meta name="twitter:creator" content="@tryghost" />
-    <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="666" />
-
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Website",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Ghost",
-        "logo": "/./assets/images/blog-icon.png"
-    },
-    "url": "/",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/./assets/images/blog-cover.jpg",
-        "width": 2000,
-        "height": 666
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "/"
-    },
-    "description": "The professional publishing platform"
-}
-    </script>
-
-    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
-    <script type="text/javascript">
-    ghost.init({
-    	clientId: "ghost-frontend",
-    	clientSecret: "f84a07a72b17"
-    });
-    </script> -->
-
-    <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Ghost" href="/feed.xml" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+    
+      <meta name="twitter:title" content="AdcKi`s Lab">
+    
+    
+      <meta name="twitter:url" content="http://bipowi.github.io/">
+    
+    
+      <meta name="twitter:description" content="just blog">
+    
+    
+      <meta name="twitter:image:src" content="http://bipowi.github.io/assets/img/touring.jpg">
+    
 
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+
+    <!-- Come and get me RSS readers -->
+    <link rel="alternate" type="application/rss+xml" title="AdcKi`s Lab" href="http://bipowi.github.io/feed.xml" />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie.css"><![endif]-->
+    <link rel="canonical" href="http://bipowi.github.io/">
+
+    <!-- Modernizr -->
+    <script src="/assets/js/modernizr.custom.15390.js" type="text/javascript"></script>
+
+    
 </head>
-<body class="home-template">
-
-    <div class="site-wrapper">
-        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
-
-<!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer " style="background-image:  url(/./assets/images/blog-cover.jpg) ">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                
-                    <img class="site-logo" src="/./assets/images/blog-icon.png" alt="Ghost"/>
-                
-            </h1>
-            <h2 class="site-description">The professional publishing platform</h2>
-        </div>
-        <nav class="site-nav">
-    <div class="site-nav-left">
-        
-        
-            <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
-    <li class="nav-getting-started" role="menuitem"><a href="/tag/getting-started/">Getting Started</a></li>
-    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
-</ul>
-
-        
-    </div>
-    <div class="site-nav-right">
-        <div class="social-links">
-            
-                <a class="social-link social-link-fb" href="https://facebook.com/ghost" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
-</a>
-            
-            
-                <a class="social-link social-link-tw" href="https://twitter.com/tryghost" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
-</a>
-            
-        </div>
-        
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
-        
-    </div>
-</nav>
-
-    </div>
-</header>
-
-<!-- The main content area -->
-<main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
-
-        <div class="post-feed">
-            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
-            
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/welcome">
-                <div class="post-card-image" style="background-image: url(/assets/images/welcome.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/welcome">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Welcome to Ghost</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Hey! Welcome to Ghost, it’s great to have you :) We know that first impressions are important, so we’ve populated your new site with some initial Getting Started posts that will help you</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/the-editor">
-                <div class="post-card-image" style="background-image: url(/assets/images/writing.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/the-editor">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Using the Ghost editor</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Ghost uses a language called Markdown to format text. When you go to edit a post and see special characters and colours intertwined between the words, those are Markdown shortcuts which tell Ghost</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/using-tags">
-                <div class="post-card-image" style="background-image: url(/assets/images/tags.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/using-tags">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Organising your content with tags</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Ghost has a single, powerful organisational taxonomy, called tags. It doesn't matter whether you want to call them categories, tags, boxes, or anything else. You can think of Ghost tags a lot like</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/managing-users">
-                <div class="post-card-image" style="background-image: url(/assets/images/team.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/managing-users">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Managing Ghost users</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Ghost has a number of different user roles for your team Authors The base user level in Ghost is an author. Authors can write posts, edit their own posts, and publish their own</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/private-sites">
-                <div class="post-card-image" style="background-image: url(/assets/images/locked.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/private-sites">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Making your site private</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Sometimes you might want to put your site behind closed doors If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/advanced-markdown">
-                <div class="post-card-image" style="background-image: url(/assets/images/advanced.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/advanced-markdown">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Advanced Markdown tips</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>There are lots of powerful things you can do with the Ghost editor If you've gotten pretty comfortable with all the basics of writing in Ghost, then you may enjoy some more advanced</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/themes">
-                <div class="post-card-image" style="background-image: url(/assets/images/design.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/themes">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Getting started</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Setting up your own Ghost theme</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Creating a totally custom design for your publication Ghost comes with a beautiful default theme called Casper, which is designed to be a clean, readable publication layout and can be easily adapted for</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/the-businessman-and-fisherman">
-                <div class="post-card-image" style="background-image: url(/assets/images/water.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/the-businessman-and-fisherman">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Fables</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">The Businessman & The Fisherman</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/hannah.jpg" alt="Hannah Wolfe" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/hannah/">Hannah Wolfe</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/a-full-and-comprehensive-style-test">
-                <div class="post-card-image" style="background-image: url(/assets/images/bear.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/a-full-and-comprehensive-style-test">
-                <header class="post-card-header">
-                    
-
-                    <h2 class="post-card-title">A Full and Comprehensive Style Test</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs. Heading 1 Heading 2 Heading 3 Heading 4 Heading</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/john.jpg" alt="John O'Nolan" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/john/">John O'Nolan</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/i-have-a-dream">
-                <div class="post-card-image" style="background-image: url(/assets/images/sky.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/i-have-a-dream">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Speeches</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">I Have a Dream</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation. Five score years ago, a great</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/martin.jpg" alt="Martin Luther King" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/martin/">Martin Luther King</a>
-                        </span>
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/the-purpose-of-education">
-                <div class="post-card-image" style="background-image: url(/assets/images/grapes.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/the-purpose-of-education">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Speeches</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">The Purpose of Education</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>As I engage in the so-called “bull sessions” around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the “brethren”</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/martin.jpg" alt="Martin Luther King" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/martin/">Martin Luther King</a>
-                        </span>
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/out-to-sea">
-                <div class="post-card-image" style="background-image: url(/assets/images/waves.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/out-to-sea">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Fiction</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Out to Sea</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>I had this story from one who had no business to tell it to me, or to any other. I may credit the seductive influence of an old vintage upon the narrator for</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/edgar.gif" alt="Edgar Rice Burroughs" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/edgar/">Edgar Rice Burroughs</a>
-                        </span>
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/looking-glass-house">
-                <div class="post-card-image" style="background-image: url(/assets/images/summit.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/looking-glass-house">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Fiction</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Looking-Glass house</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>One thing was certain, that the white kitten had had nothing to do with it:— it was the black kitten’s fault entirely. For the white kitten had been having its face washed by</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/lewis.jpeg" alt="Lewis Carroll" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/lewis/">Lewis Carroll</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/down-the-rabbit-hole">
-                <div class="post-card-image" style="background-image: url(/assets/images/piano.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/down-the-rabbit-hole">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Fiction</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Down The Rabbit Hole</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/lewis.jpeg" alt="Lewis Carroll" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/lewis/">Lewis Carroll</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/gettysburg-address">
-                <div class="post-card-image" style="background-image: url(/assets/images/bus.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/gettysburg-address">
-                <header class="post-card-header">
-                    
-
-                    <h2 class="post-card-title">Gettysburg Address</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    <p>Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged</p>
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/abraham.jpg" alt="Abraham Lincoln" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/abraham/">Abraham Lincoln</a>
-                        </span>
-                    
-                
-                    
-                
-                    
-                
-            </footer>
-        </div>
-    </article>
 
 
-        </div>
+<body>
 
-    </div>
-</main>
+    <div class="header">
+     <div class="container">
+         <h1 class="logo"><a href="/">AdcKi`s Lab</a></h1>
+         <nav class="nav-collapse">
+             <ul class="noList">
+                 
+                    
+                    
+                 <li class="element first current ">
+                    
+                    
+                     <a href="/">Home</a>
+                 </li> 
+                 
+                    
+                    
+                 <li class="element   last">
+                    
+                    
+                     <a href="/about">About</a>
+                 </li> 
+                 
+                 <li> <a href="https://github.com/bipowi" target="_blank">GitHub</a></li>
+             </ul>
+         </nav>
+     </div>
+ </div><!-- end .header -->
 
 
-        <!-- Previous/next page links - displayed on every page -->
-        
-
-        <!-- The footer at the very bottom of the screen -->
-        <footer class="site-footer outer">
-            <div class="site-footer-content inner">
-                <section class="copyright"><a href="/">Ghost</a> &copy; 2018</section>
-                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
-                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
-                <nav class="site-footer-nav">
-                    <a href="/">Latest Posts</a>
-                    <a href="https://facebook.com/ghost" target="_blank" rel="noopener">Facebook</a>
-                    <a href="https://twitter.com/tryghost" target="_blank" rel="noopener">Twitter</a>
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-                </nav>
-            </div>
-        </footer>
-
-    </div>
-
-    <!-- The big email subscribe modal content -->
+   <div class="content">
+      <div class="container">
+         <div class="home" id="home">
+  <h1 class="pageTitle">Recent Posts</h1>
+  <ul class="posts noList">
     
-        <div id="subscribe" class="subscribe-overlay">
-            <a class="subscribe-overlay-close" href="#"></a>
-            <div class="subscribe-overlay-content">
-                
-                    <img class="subscribe-overlay-logo" src="/./assets/images/blog-icon.png" alt="Ghost" />
-                
-                <h1 class="subscribe-overlay-title">Subscribe to Ghost</h1>
-                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
-                <form method="post" action="/subscribe/" class="">
-    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
-
-    <div class="form-group">
-        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
-    </div>
-    <button class="" type="submit" disabled><span>Subscribe</span></button>
-    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
-</form>
-
-            </div>
-        </div>
+      <li>
+        <span class="date">December 15, 2014</span>
+        <h3><a class="post-link" href="/blog/example-post-formatting/">Example Post Formatting</a></h3>
+        <p>This is a post description for meta purposes. This is also the excerpt of the article that shows up on the index/home page. Change this in the post YAML.</p>
+      </li>
     
+      <li>
+        <span class="date">December 14, 2014</span>
+        <h3><a class="post-link" href="/blog/featured-image/">Featured Image</a></h3>
+        <p>Lorem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.
 
-    <!-- highlight.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
-      });
-    });</script>
-
-    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
-
-
-    <!-- Paginator increased to "infinit" in _config.yml -->
-    <!-- if paginator.posts  -->
-    <!-- <script>
-        var maxPages = parseInt('1');
-    </script>
-    <script src="/assets/js/infinitescroll.js"></script> -->
-    <!-- /endif -->
-
+</p>
+      </li>
     
+      <li>
+        <span class="date">December 13, 2014</span>
+        <h3><a class="post-link" href="/blog/code-snippet/">Post With A Code Snippet</a></h3>
+        <p>You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
-
-    <!-- Add Google Analytics  -->
-    <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-69281367-1', 'auto');
-  ga('send', 'pageview');
-
- </script>
-
-
-    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+</p>
+      </li>
     
+      <li>
+        <span class="date">December 12, 2014</span>
+        <h3><a class="post-link" href="/blog/figure-with-caption/">Figure With A Caption</a></h3>
+        <p>Lorem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.
 
-    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
-    <!-- ghost_foot -->
+</p>
+      </li>
+    
+      <li>
+        <span class="date">December 11, 2014</span>
+        <h3><a class="post-link" href="/blog/image-in-post/">Image in Post</a></h3>
+        <p>Lorem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.
+
+</p>
+      </li>
+    
+  </ul>
+  <!-- Pagination links -->
+  <div class="pagination">
+    
+    
+      <a href="/blog/page2/" class="next button__outline">Older Posts</a>
+    
+  </div>
+</div>
+
+      </div>
+   </div><!-- end .content -->
+
+   <div class="footer">
+   <div class="container">
+      <p class="copy">&copy; 2019 <a href="https://adcki.dev">AdcKi</a> Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://github.com/brianmaierjr/long-haul">Long Haul</a> Theme</p>
+
+      <div class="footer-links"> 
+         <ul class="noList"> 
+            
+            
+            
+            <li><a href="https://github.com/bipowi">
+                  <svg id="github" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 30px; width: 30px;"><circle class="outer-shape" cx="50" cy="50" r="48" style="opacity: 1;"></circle>
+                  <path class="inner-shape" style="opacity: 1;" transform="translate(25,25) scale(0.5)" d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M79.099,79.099 c-3.782,3.782-8.184,6.75-13.083,8.823c-1.245,0.526-2.509,0.989-3.79,1.387v-7.344c0-3.86-1.324-6.699-3.972-8.517 c1.659-0.16,3.182-0.383,4.57-0.67c1.388-0.287,2.855-0.702,4.402-1.245c1.547-0.543,2.935-1.189,4.163-1.938 c1.228-0.75,2.409-1.723,3.541-2.919s2.082-2.552,2.847-4.067s1.372-3.334,1.818-5.455c0.446-2.121,0.67-4.458,0.67-7.01 c0-4.945-1.611-9.155-4.833-12.633c1.467-3.828,1.308-7.991-0.478-12.489l-1.197-0.143c-0.829-0.096-2.321,0.255-4.474,1.053 c-2.153,0.798-4.57,2.105-7.249,3.924c-3.797-1.053-7.736-1.579-11.82-1.579c-4.115,0-8.039,0.526-11.772,1.579 c-1.69-1.149-3.294-2.097-4.809-2.847c-1.515-0.75-2.727-1.26-3.637-1.532c-0.909-0.271-1.754-0.439-2.536-0.503 c-0.782-0.064-1.284-0.079-1.507-0.048c-0.223,0.031-0.383,0.064-0.478,0.096c-1.787,4.53-1.946,8.694-0.478,12.489 c-3.222,3.477-4.833,7.688-4.833,12.633c0,2.552,0.223,4.889,0.67,7.01c0.447,2.121,1.053,3.94,1.818,5.455 c0.765,1.515,1.715,2.871,2.847,4.067s2.313,2.169,3.541,2.919c1.228,0.751,2.616,1.396,4.163,1.938 c1.547,0.543,3.014,0.957,4.402,1.245c1.388,0.287,2.911,0.511,4.57,0.67c-2.616,1.787-3.924,4.626-3.924,8.517v7.487 c-1.445-0.43-2.869-0.938-4.268-1.53c-4.899-2.073-9.301-5.041-13.083-8.823c-3.782-3.782-6.75-8.184-8.823-13.083 C9.934,60.948,8.847,55.56,8.847,50s1.087-10.948,3.231-16.016c2.073-4.899,5.041-9.301,8.823-13.083s8.184-6.75,13.083-8.823 C39.052,9.934,44.44,8.847,50,8.847s10.948,1.087,16.016,3.231c4.9,2.073,9.301,5.041,13.083,8.823 c3.782,3.782,6.75,8.184,8.823,13.083c2.143,5.069,3.23,10.457,3.23,16.016s-1.087,10.948-3.231,16.016 C85.848,70.915,82.88,75.317,79.099,79.099L79.099,79.099z"></path>
+                  </svg>
+            </a></li>
+             
+            
+            <li><a href="mailto:bipowi@gmail.com">
+                  <svg id="mail" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 30px; width: 30px;"><circle class="outer-shape" cx="50" cy="50" r="48" style="opacity: 1;"></circle>
+                  <path class="inner-shape" style="opacity: 1;" transform="translate(25,25) scale(0.5)" d="M50,1C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M25.5,25.5h49 c0.874,0,1.723,0.188,2.502,0.542L50,57.544L22.998,26.041C23.777,25.687,24.626,25.499,25.5,25.5L25.5,25.5z M19.375,68.375v-36.75 c0-0.128,0.005-0.256,0.014-0.383l17.96,20.953L19.587,69.958C19.448,69.447,19.376,68.916,19.375,68.375L19.375,68.375z M74.5,74.5 h-49c-0.541,0-1.072-0.073-1.583-0.212l17.429-17.429L50,66.956l8.653-10.096l17.429,17.429C75.572,74.427,75.041,74.5,74.5,74.5 L74.5,74.5z M80.625,68.375c0,0.541-0.073,1.072-0.211,1.583L62.652,52.195l17.96-20.953c0.008,0.127,0.014,0.255,0.014,0.383 L80.625,68.375L80.625,68.375z"></path>
+                  </svg>
+            </a></li>
+            
+         </ul>
+      </div>
+   </div>
+</div><!-- end .footer -->
+
+
+   <!-- Add jQuery and other scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src=""><\/script>')</script>
+<script src="/assets/js/dropcap.min.js"></script>
+<script src="/assets/js/responsive-nav.min.js"></script>
+<script src="/assets/js/scripts.js"></script>
+
 
 </body>
+
 </html>
